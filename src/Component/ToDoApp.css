@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(152, 172, 172);
+}
+
+.todo {
+    width: 540px;
+    background: whitesmoke;
+    margin: 100px auto 20px;
+    /*top, left-right, bottom*/
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0px rgb(0, 0, 0, 0.15);
+
+}
+
+.todo h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo h2 img {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dae0ea;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    /*flex: 1;*/
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: rgb(147, 207, 231);
+    border-radius: 0px 5px 5px 0px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.taskList {
+    display: flex;
+    /* Flexbox layout */
+    align-items: center;
+    /* Center items vertically */
+    margin: 5% 10px;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.taskList img {
+    width: 20px;
+    cursor: pointer;
+
+}
+
+.taskList p {
+    word-break: break-word;
+    margin-right: 5%;
+    margin-left: 15px;
+    font-size: 15px;
+}
