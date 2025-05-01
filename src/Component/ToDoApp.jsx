@@ -29,22 +29,24 @@ const ToDoApp = () => {
     }
 
     const deleteTask = (id) => {
-        setTaskAdd((prev) => {
+        setTaskAdd((prev) => { //When using curly braces, you need an explicit return to send back the new filtered array
             return prev.filter((t) => t.id !== id)
         });
+        // or it can be written as 
+        //  setTaskAdd(prev => prev.filter(t => t.id !== id)); instead of using curly braces
     }
 
 
     const toogleTask = (id) => {
         setTaskAdd((prev) => {
-            const updateTask = prev.map((t) => //iterating over the taskAdd array, transforming each task.Return a new array instead of modifying the existing one.
+            const updateTask = prev.map((t) => //iterating over the taskAdd array, transforming each task. Return a new array instead of modifying the existing one.
                 t.id === id ? { ...t, isComplete: !t.isComplete } : t
             )
             //If the task's id matches the given id, it returns a new object with the same properties (...t), but flips the isComplete status
             //If the task doesn't match the given id, it's returned unchanged.
 
             updateTask.sort((a,b)=>Number(a.isComplete)-Number(b.isComplete));
-            //then, sort tasks so completed ones move to the end
+            //then, sort tasks so completed ones move to the end and Number convert false as 0 and true as 1
 
             return updateTask;
         })
