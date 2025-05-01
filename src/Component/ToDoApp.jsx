@@ -61,7 +61,7 @@ const ToDoApp = () => {
             <h2>To-Do-List <img src={icon} alt="icon" /></h2>
 
             <div className="row">
-                <input ref={inputRef} type="text" placeholder="Add your task" />
+                <input ref={inputRef} type="text" placeholder="List your tasks" />
                 <button onClick={addTask}>Add</button>
             </div>
 
