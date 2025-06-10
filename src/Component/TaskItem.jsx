@@ -7,12 +7,9 @@ import trash from '../Asset/delete.png'
 const TaskItem = ({ text, id, isComplete, del, toggle }) => {
     return (
         <div className="taskList">
-            <div className='content' onClick={() => { toggle(id) }}>
-                <img src={isComplete ? tick : nottick} alt="checked" />
-                <p style={{
-                    textDecoration: isComplete ? 'line-through' : 'none',
-                    color: isComplete ? 'gray' : 'black'
-                }}>
+            <div className='content' >
+                <img src={isComplete ? tick : nottick} alt="checked" onClick={() => { toggle(id) }}/>
+                <p className={isComplete ? "completed" : "pending"}>
                     {text}
                 </p>
             </div>

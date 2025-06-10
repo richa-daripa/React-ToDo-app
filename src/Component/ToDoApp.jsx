@@ -13,7 +13,7 @@ const ToDoApp = () => {
 
     const addTask = () => {
         const inputText = inputRef.current.value.trim();//taking input text and removing spaces from start and end
-        //console.log(inputText);
+        
         if (inputText === "") {
             alert("Please enter your task!");
             return;
@@ -52,7 +52,7 @@ const ToDoApp = () => {
         })
     }
 
-    // Save tasks to localStorage when tasks change
+    // Save tasks to localStorage everytime when tasks change
     useEffect(() => {
         //console.log(taskAdd);
         localStorage.setItem("tasklist", JSON.stringify(taskAdd));//since taskAdd is an array but we cannot store it .we can only store string

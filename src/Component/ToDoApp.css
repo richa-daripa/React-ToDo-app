@@ -87,3 +87,11 @@ button {
     margin-left: 15px;
     font-size: 15px;
 }
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+.pending{
+    text-decoration: none;
+    color: black;
+}
